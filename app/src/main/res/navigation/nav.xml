@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.apiestudiante.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_homeEstudianteFragment"
+            app:destination="@id/homeEstudianteFragment" />
+        <action
+            android:id="@+id/action_home2_to_homeCarreraFragment"
+            app:destination="@id/homeCarreraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/estudianteFragment"
+        android:name="com.example.apiestudiante.EstudianteFragment"
+        android:label="fragment_estudiante"
+        tools:layout="@layout/fragment_estudiante" />
+    <fragment
+        android:id="@+id/estudianteFragmentEdit"
+        android:name="com.example.apiestudiante.EstudianteFragmentEdit"
+        android:label="fragment_estudiante_edit"
+        tools:layout="@layout/fragment_estudiante_edit" />
+    <fragment
+        android:id="@+id/carreraFragment"
+        android:name="com.example.apiestudiante.CarreraFragment"
+        android:label="fragment_carrera"
+        tools:layout="@layout/fragment_carrera" />
+    <fragment
+        android:id="@+id/carreraFragmentEdit"
+        android:name="com.example.apiestudiante.CarreraFragmentEdit"
+        android:label="fragment_carrera_edit"
+        tools:layout="@layout/fragment_carrera_edit" />
+    <fragment
+        android:id="@+id/homeEstudianteFragment"
+        android:name="com.example.apiestudiante.HomeEstudianteFragment"
+        android:label="fragment_home_estudiante"
+        tools:layout="@layout/fragment_home_estudiante" >
+        <action
+            android:id="@+id/action_homeEstudianteFragment_to_estudianteFragment"
+            app:destination="@id/estudianteFragment" />
+        <action
+            android:id="@+id/action_homeEstudianteFragment_to_estudianteFragmentEdit"
+            app:destination="@id/estudianteFragmentEdit" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeCarreraFragment"
+        android:name="com.example.apiestudiante.HomeCarreraFragment"
+        android:label="fragment_home_carrera"
+        tools:layout="@layout/fragment_home_carrera" >
+        <action
+            android:id="@+id/action_homeCarreraFragment_to_carreraFragmentEdit"
+            app:destination="@id/carreraFragmentEdit" />
+        <action
+            android:id="@+id/action_homeCarreraFragment_to_carreraFragment"
+            app:destination="@id/carreraFragment" />
+    </fragment>
+
+
+</navigation>
